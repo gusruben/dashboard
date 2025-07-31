@@ -16,8 +16,11 @@
   --color-primary-500: #3535FF;
   --color-primary-400: #9A9AFF;
   --color-primary-300: #D7D7FF;
+  
+  --font-family-default: 'Space Mono', monospace;
 }
 
 body {
-    @apply bg-gray-950
+    @apply bg-gray-950;
+    font-family: var(--font-family-default);
 }
