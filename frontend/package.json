@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"@fontsource/space-mono": "^5.2.8",
+		"@iconify/svelte": "^5.0.1",
 		"css-filter-converter": "^1.0.110"
 	}
 }

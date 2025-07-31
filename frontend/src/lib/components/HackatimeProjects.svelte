@@ -1,47 +1,42 @@
+<script>
+import Icon from '@iconify/svelte';
+</script>
+
 <style>
 .hackatime-project {
     position: relative;
     z-index: 0;
 }
-.hackatime-project::after {
-    content: "";
+:global(.lang-icon) {
     position: absolute;
-    bottom: -0.5rem;
-    right: 0.25rem;
-    width: 5rem;
-    height: 5rem;
-    background-image: var(--lang-img);
-    background-size: cover;
+    bottom: -1.5rem;
+    right: -0.5rem;
+    width: 6rem;
+    height: 6rem;
     z-index: -1;
-}
-.hackatime-increase::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 </style>
 
 <div class="bg-gray-900 rounded-3xl col-span-3 row-span-2 flex flex-col">
     <div
         class="hackatime-project w-full flex-1 p-5 flex flex-row items-center justify-between gap-2 overflow-hidden rounded-t-3xl"
-        style="--lang-img: url(/typescript.svg)"
     >
         <div class="flex flex-col min-w-0 flex-1">
             <p class="text-gray-200 text-sm leading-none">Past 24 Hours</p>
             <p class="text-white truncate">personal-dashboard</p>
         </div>
         <p class="text-white text-3xl flex-shrink-0">35h</p>
+        <Icon icon="simple-icons:typescript" color="#373745" class="lang-icon" />
     </div>
     <hr class="text-gray-500">
         <div class="hackatime-project w-full flex-1 p-5 flex flex-row items-center justify-between gap-2 overflow-hidden rounded-b-3xl"
-        style="--lang-img: url(/svelte.svg)"
     >
         <div class="flex flex-col min-w-0 flex-1">
             <p class="text-gray-200 text-sm leading-none">Past 7 Days</p>
             <p class="text-white truncate">daydream</p>
         </div>
-        <p class="text-white text-3xl flex-shrink-0 hackatime-increase">35h</p>
+        <p class="text-white text-3xl flex-shrink-0">35h</p>
+        <Icon icon="simple-icons:svelte" color="#373745" class="lang-icon" />
     </div>
 
     <!-- <div class="flex-1 flex flex-col justify-center">

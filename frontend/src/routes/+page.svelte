@@ -9,9 +9,9 @@
         <div class="bg-primary-500 rounded-3xl col-span-4 row-span-5"></div>
 
         <!-- quick links -->
-        <WebShortcut src="/freedom.svg" link="https://example.com"/>
-		<WebShortcut src="/airtable.svg" link="https://example.com"/>
-		<WebShortcut src="/basecamp.svg" link="https://example.com"/>
+        <WebShortcut icon="ph:butterfly" link="https://example.com"/>
+        <WebShortcut icon="simple-icons:airtable" link="https://example.com"/>
+        <WebShortcut icon="simple-icons:basecamp" link="https://example.com"/>
 		
         <!-- bus info OR misc widgets -->
         <div class="bg-gray-900 rounded-3xl col-span-3 row-span-6"></div>
