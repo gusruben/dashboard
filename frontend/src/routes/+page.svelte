@@ -1,5 +1,6 @@
 <script lang="ts">
-	import WebShortcut from "$lib/components/WebShortcut.svelte";
+	import HackatimeProjects from "$lib/components/HackatimeProjects.svelte";
+    import WebShortcut from "$lib/components/WebShortcut.svelte";
 </script>
 
 <div class="min-h-screen bg-gray-950 p-8 flex items-center justify-center">
@@ -16,7 +17,7 @@
         <div class="bg-gray-900 rounded-3xl col-span-3 row-span-6"></div>
 		
         <!-- hackatime stats + ai prompt -->
-        <div class="bg-gray-900 rounded-3xl col-span-3 row-span-2"></div>
+        <HackatimeProjects />
         <div class="bg-gray-900 rounded-3xl col-span-3 row-span-2"></div>
 		
         <!-- web search -->
