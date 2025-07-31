@@ -1,10 +1,5 @@
 <script lang="ts">
 	import WebShortcut from "$lib/components/WebShortcut.svelte";
-    import CssFilterConverter from "css-filter-converter";
-
-    // color web shortcuts properly
-    const webShortCutFilter = CssFilterConverter.hexToFilter("#6B6B75")
-
 </script>
 
 <div class="min-h-screen bg-gray-950 p-8 flex items-center justify-center">
