@@ -5,37 +5,47 @@
 		name: "personal-dashboard",
 		time: "35h",
 		lang: "typescript",
+		link: "https://example.com",
 	};
 
 	const projectWeek = {
 		name: "daydream",
 		time: "35h",
 		lang: "svelte",
+		link: "https://example.com",
 	}
 </script>
 
 <div class="col-span-3 row-span-2 flex flex-col rounded-3xl bg-gray-900">
-	<div
-		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-2 overflow-hidden rounded-t-3xl p-5"
+	<a
+		href={projectDay.link}
+		target="_blank"
+		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-t-3xl p-5 hover:backdrop-brightness-110 group"
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
 			<p class="text-sm leading-none text-gray-200">Past 24 hours</p>
-			<p class="truncate text-white">{projectDay.name}</p>
+			<div class="project-name-container">
+				<p class="project-name text-white">{projectDay.name}</p>
+			</div>
 		</div>
 		<p class="flex-shrink-0 text-3xl text-white">{projectDay.time}</p>
-		<Icon icon="simple-icons:{projectDay.lang}" color="#373745" class="lang-icon" />
-	</div>
+		<Icon icon="simple-icons:{projectDay.lang}" color="#373745" class="lang-icon group-hover:brightness-110" />
+	</a>
 	<hr class="text-gray-500" />
-	<div
-		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-2 overflow-hidden rounded-b-3xl p-5"
+	<a
+		href={projectWeek.link}
+		target="_blank"
+		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-b-3xl p-5 hover:backdrop-brightness-110 group"
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
 			<p class="text-sm leading-none text-gray-200">Past 7 days</p>
-			<p class="truncate text-white">{projectWeek.name}</p>
+			<div class="project-name-container">
+				<p class="project-name text-white">{projectWeek.name}</p>
+			</div>
 		</div>
 		<p class="flex-shrink-0 text-3xl text-white">{projectWeek.time}</p>
-		<Icon icon="simple-icons:{projectWeek.lang}" color="#373745" class="lang-icon" />
-	</div>
+		<Icon icon="simple-icons:{projectWeek.lang}" color="#373745" class="lang-icon group-hover:brightness-110" />
+	</a>
 </div>
 
 <style>
@@ -43,6 +53,30 @@
 		position: relative;
 		z-index: 0;
 	}
+	
+	.project-name-container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+	
+	.project-name {
+		white-space: nowrap;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	.project-name-container::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 2rem;
+		height: 100%;
+		background: linear-gradient(to right, transparent, #2c2c3b);
+		pointer-events: none;
+	}
+	
 	:global(.lang-icon) {
 		position: absolute;
 		bottom: -1.5rem;
