@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '@fontsource/space-mono';
-	import '../app.css';
+	import "@fontsource/space-mono";
+	import "../app.css";
 
 	let { children } = $props();
 </script>

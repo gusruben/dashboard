@@ -1,6 +1,6 @@
 <script lang="ts">
-	import HackatimeProjects from '$lib/components/HackatimeProjects.svelte';
-	import WebShortcut from '$lib/components/WebShortcut.svelte';
+	import HackatimeProjects from "$lib/components/HackatimeProjects.svelte";
+	import WebShortcut from "$lib/components/WebShortcut.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center bg-gray-950 p-8">

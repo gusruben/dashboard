@@ -1,5 +1,5 @@
 <script>
-	import Icon from '@iconify/svelte';
+	import Icon from "@iconify/svelte";
 </script>
 
 <div class="col-span-3 row-span-2 flex flex-col rounded-3xl bg-gray-900">
