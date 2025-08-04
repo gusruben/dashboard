@@ -1,3 +1,1 @@
-<div class="bg-gray-900 rounded-3xl col-span-7 row-span-1">
-    
-</div>
+<div class="col-span-7 row-span-1 rounded-3xl bg-gray-900"></div>
