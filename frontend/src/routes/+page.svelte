@@ -2,6 +2,7 @@
 	import HackatimeProjects from "$lib/components/HackatimeProjects.svelte";
 	import WebShortcut from "$lib/components/WebShortcut.svelte";
 	import AIChat from "$lib/components/AIChat.svelte";
+	import WebSearch from "$lib/components/WebSearch.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center bg-gray-950 p-8">
@@ -23,6 +24,6 @@
 		<AIChat />
 
 		<!-- web search -->
-		<div class="col-span-7 row-span-1 rounded-3xl bg-gray-900"></div>
+		<WebSearch />
 	</div>
 </div>
