@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../node_modules/layerchart/dist";
 
 @theme {
 	--color-gray-950: #18181b;

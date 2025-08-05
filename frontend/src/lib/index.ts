@@ -3,3 +3,4 @@ export { default as HackatimeProjects } from './components/HackatimeProjects.sve
 export { default as WebSearch } from './components/WebSearch.svelte';
 export { default as WebShortcut } from './components/WebShortcut.svelte';
 export { default as Welcome } from './components/Welcome.svelte';
+export { default as CommitGraph } from './components/CommitGraph.svelte';
