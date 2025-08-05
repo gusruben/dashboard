@@ -21,9 +21,9 @@
 }
 
 .bg-primary-fancy {
-	@apply bg-primary-500 relative;
+	@apply bg-primary-500 relative z-0;
 }
-.bg-primary-fancy::after {
+.bg-primary-fancy::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -31,6 +31,7 @@
 	background-size: 3.5rem;
 	opacity: 0.1;
 	border-radius: inherit;
+	z-index: -1;
 }
 
 body {
