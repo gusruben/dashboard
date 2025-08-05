@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HackatimeProjects from "$lib/components/HackatimeProjects.svelte";
 	import WebShortcut from "$lib/components/WebShortcut.svelte";
+	import AIChat from "$lib/components/AIChat.svelte";
 </script>
 
 <div class="flex min-h-screen items-center justify-center bg-gray-950 p-8">
@@ -16,9 +17,10 @@
 		<!-- bus info OR misc widgets -->
 		<div class="col-span-3 row-span-6 rounded-3xl bg-gray-900"></div>
 
-		<!-- hackatime stats + ai prompt -->
+		<!-- hackatime stats -->
 		<HackatimeProjects />
-		<div class="col-span-3 row-span-2 rounded-3xl bg-gray-900"></div>
+		<!-- ai prompt -->
+		<AIChat />
 
 		<!-- web search -->
 		<div class="col-span-7 row-span-1 rounded-3xl bg-gray-900"></div>
