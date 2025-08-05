@@ -24,7 +24,7 @@
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
 			<p class="text-sm leading-none text-gray-200">Past 24 hours</p>
-			<div class="project-name-container group-hover:[--bg:var(--color-)]">
+			<div class="project-name-container after:bg-linear-to-l after:from-gray-900 group-hover:after:from-gray-850 after:transition after:duration-50">
 				<p class="project-name text-white">{projectDay.name}</p>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
 			<p class="text-sm leading-none text-gray-200">Past 7 days</p>
-			<div class="project-name-container">
+			<div class="project-name-container after:bg-linear-to-l after:from-gray-900 group-hover:after:from-gray-850 after:transition after:duration-50">
 				<p class="project-name text-white">{projectWeek.name}</p>
 			</div>
 		</div>
@@ -73,8 +73,6 @@
 		right: 0;
 		width: 2rem;
 		height: 100%;
-		--bg: #2c2c3b;
-		background: linear-gradient(to right, transparent, var(--bg));
 		pointer-events: none;
 	}
 	
