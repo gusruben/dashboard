@@ -1,8 +1,5 @@
 <script lang="ts">
-	import HackatimeProjects from "$lib/components/HackatimeProjects.svelte";
-	import WebShortcut from "$lib/components/WebShortcut.svelte";
-	import AIChat from "$lib/components/AIChat.svelte";
-	import WebSearch from "$lib/components/WebSearch.svelte";
+	import { HackatimeProjects, WebShortcut, AIChat, WebSearch } from "$lib";
 </script>
 
 <div class="flex min-h-screen items-center justify-center bg-gray-950 p-8">
