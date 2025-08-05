@@ -1,14 +1,21 @@
-<script>
+<script lang="ts">
 	import Icon from "@iconify/svelte";
 
-	const projectDay = {
+	interface Project {
+		name: string;
+		time: string;
+		lang: string;
+		link: string;
+	}
+
+	const projectDay: Project = {
 		name: "personal-dashboard",
 		time: "35h",
 		lang: "typescript",
 		link: "https://example.com",
 	};
 
-	const projectWeek = {
+	const projectWeek: Project = {
 		name: "daydream",
 		time: "35h",
 		lang: "svelte",
@@ -16,36 +23,27 @@
 	}
 </script>
 
-<div class="col-span-3 row-span-2 flex flex-col rounded-3xl bg-gray-900">
+{#snippet projectItem(project: Project, timeframe: string)}
 	<a
-		href={projectDay.link}
+		href={project.link}
 		target="_blank"
-		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-t-3xl p-5 hover:bg-gray-850 group transition-all duration-50"
+		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden p-5 hover:bg-gray-850 group transition-all duration-50"
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
-			<p class="text-sm leading-none text-gray-200">Past 24 hours</p>
+			<p class="text-sm leading-none text-gray-200">{timeframe}</p>
 			<div class="project-name-container after:bg-linear-to-l after:from-gray-900 group-hover:after:from-gray-850 after:transition after:duration-50">
-				<p class="project-name text-white">{projectDay.name}</p>
+				<p class="project-name text-white">{project.name}</p>
 			</div>
 		</div>
-		<p class="flex-shrink-0 text-3xl text-white">{projectDay.time}</p>
-		<Icon icon="simple-icons:{projectDay.lang}" color="#373745" class="lang-icon group-hover:brightness-110 transition-all duration-50" />
+		<p class="flex-shrink-0 text-3xl text-white">{project.time}</p>
+		<Icon icon="simple-icons:{project.lang}" color="#373745" class="lang-icon group-hover:brightness-110 transition-all duration-50" />
 	</a>
+{/snippet}
+
+<div class="col-span-3 row-span-2 flex flex-col rounded-3xl bg-gray-900 overflow-hidden">
+	{@render projectItem(projectDay, "Past 24 hours")}
 	<hr class="text-gray-500" />
-	<a
-		href={projectWeek.link}
-		target="_blank"
-		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-b-3xl p-5 hover:bg-gray-850 group transition-all duration-50"
-	>
-		<div class="flex min-w-0 flex-1 flex-col">
-			<p class="text-sm leading-none text-gray-200">Past 7 days</p>
-			<div class="project-name-container after:bg-linear-to-l after:from-gray-900 group-hover:after:from-gray-850 after:transition after:duration-50">
-				<p class="project-name text-white">{projectWeek.name}</p>
-			</div>
-		</div>
-		<p class="flex-shrink-0 text-3xl text-white">{projectWeek.time}</p>
-		<Icon icon="simple-icons:{projectWeek.lang}" color="#373745" class="lang-icon group-hover:brightness-110 transition-all duration-50" />
-	</a>
+	{@render projectItem(projectWeek, "Past 7 days")}
 </div>
 
 <style>
