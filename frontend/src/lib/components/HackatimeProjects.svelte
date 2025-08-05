@@ -20,22 +20,22 @@
 	<a
 		href={projectDay.link}
 		target="_blank"
-		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-t-3xl p-5 hover:backdrop-brightness-110 group"
+		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-t-3xl p-5 hover:bg-gray-850 group transition-all duration-50"
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
 			<p class="text-sm leading-none text-gray-200">Past 24 hours</p>
-			<div class="project-name-container">
+			<div class="project-name-container group-hover:[--bg:var(--color-)]">
 				<p class="project-name text-white">{projectDay.name}</p>
 			</div>
 		</div>
 		<p class="flex-shrink-0 text-3xl text-white">{projectDay.time}</p>
-		<Icon icon="simple-icons:{projectDay.lang}" color="#373745" class="lang-icon group-hover:brightness-110" />
+		<Icon icon="simple-icons:{projectDay.lang}" color="#373745" class="lang-icon group-hover:brightness-110 transition-all duration-50" />
 	</a>
 	<hr class="text-gray-500" />
 	<a
 		href={projectWeek.link}
 		target="_blank"
-		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-b-3xl p-5 hover:backdrop-brightness-110 group"
+		class="hackatime-project flex w-full flex-1 flex-row items-center justify-between gap-4 overflow-hidden rounded-b-3xl p-5 hover:bg-gray-850 group transition-all duration-50"
 	>
 		<div class="flex min-w-0 flex-1 flex-col">
 			<p class="text-sm leading-none text-gray-200">Past 7 days</p>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<p class="flex-shrink-0 text-3xl text-white">{projectWeek.time}</p>
-		<Icon icon="simple-icons:{projectWeek.lang}" color="#373745" class="lang-icon group-hover:brightness-110" />
+		<Icon icon="simple-icons:{projectWeek.lang}" color="#373745" class="lang-icon group-hover:brightness-110 transition-all duration-50" />
 	</a>
 </div>
 
@@ -73,7 +73,8 @@
 		right: 0;
 		width: 2rem;
 		height: 100%;
-		background: linear-gradient(to right, transparent, #2c2c3b);
+		--bg: #2c2c3b;
+		background: linear-gradient(to right, transparent, var(--bg));
 		pointer-events: none;
 	}
 	
