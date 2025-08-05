@@ -9,6 +9,6 @@
 	></textarea>
 	<Icon 
 		icon="fluent:sparkle-28-regular" 
-		class="absolute bottom-6 right-6 w-10 h-10 text-gray-400 pointer-events-none group-[:has(textarea:focus)]:opacity-0 transition-opacity duration-100"
+		class="absolute bottom-6 right-6 w-10 h-10 text-gray-400 pointer-events-none group-[:has(textarea:focus)]:opacity-0 transition-opacity duration-50"
 	/>
 </div>
