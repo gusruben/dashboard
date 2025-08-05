@@ -20,6 +20,19 @@
 	--font-family-default: "Space Mono", monospace;
 }
 
+.bg-primary-fancy {
+	@apply bg-primary-500 relative;
+}
+.bg-primary-fancy::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: url(/bg-texture.png);
+	background-size: 3.5rem;
+	opacity: 0.1;
+	border-radius: inherit;
+}
+
 body {
 	@apply bg-gray-950;
 	font-family: var(--font-family-default);

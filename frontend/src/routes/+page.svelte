@@ -1,11 +1,14 @@
 <script lang="ts">
-	import { HackatimeProjects, WebShortcut, AIChat, WebSearch } from "$lib";
+	import { HackatimeProjects, WebShortcut, AIChat, WebSearch, Welcome } from "$lib";
 </script>
 
 <div class="flex min-h-screen items-center justify-center bg-gray-950 p-8">
 	<div class="grid aspect-[5/3] w-full max-w-4xl grid-cols-10 grid-rows-6 gap-4">
 		<!-- clock/weather, github/hackatime graph, weighted grants, and airtable stats -->
-		<div class="col-span-4 row-span-5 rounded-3xl bg-primary-500"></div>
+		<div class="col-span-4 row-span-5 rounded-3xl flex flex-col gap-4">
+			<Welcome />
+			<div class="bg-gray-900 rounded-3xl flex-1/2"></div>
+		</div>
 
 		<!-- quick links -->
 		<WebShortcut icon="ph:butterfly" link="https://example.com" />
